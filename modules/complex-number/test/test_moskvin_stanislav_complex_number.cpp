@@ -3,11 +3,11 @@
 #include <gtest/gtest.h>
 #include "include/complex_number.h"
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, can_init_complex_number) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, can_init) {
     ASSERT_NO_THROW(ComplexNumber a);
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, returns_correct_number) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, returns_correct) {
     double r1 = 2.1, i1 = 2.2;
 
     ComplexNumber a(r1, i1);
@@ -27,7 +27,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, sets_values_correctly) {
     EXPECT_DOUBLE_EQ(i1, a.getIm());
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, can_copy_complex_number) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, can_copy) {
     double r1 = 2.1, i1 = 2.2;
 
     ComplexNumber a(1.1, 2.2);
@@ -35,7 +35,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, can_copy_complex_number) {
     ASSERT_NO_THROW(ComplexNumber b(a));
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_copy_complex_number) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_copy) {
     double r1 = 2.1, i1 = 2.2;
 
     ComplexNumber a(r1, i1);
@@ -44,7 +44,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_copy_complex_number) {
     EXPECT_TRUE(a == b);
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_sum) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_sum) {
     double r1 = 2.1, i1 = 2.2, r2 = 0.1 , i2 = 0.2;
 
     ComplexNumber a(r1, i1);
@@ -56,7 +56,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_sum) {
     EXPECT_EQ(i1 + i2, Sum.getIm());
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_subtraction) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_subtraction) {
     double r1 = 2.1, i1 = 2.2, r2 = 0.1 , i2 = 0.2;
 
     ComplexNumber a(r1, i1);
@@ -68,7 +68,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_subtraction) {
     EXPECT_EQ(i1 - i2, Subtraction.getIm());
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_multiplies) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_multiplies) {
     double r1 = 2.0, i1 = 2.2, r2 = 2.2 , i2 = 1.0;
 
     ComplexNumber a(r1, i1);
@@ -80,7 +80,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_multiplies) {
     EXPECT_EQ(r1 * i2 + i1 * r2, Multiplies.getIm());
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_division) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_division) {
     double r1 = 2.2, i1 = 2.2, r2 = 2.0 , i2 = 1.0;
 
     ComplexNumber a(r1, i1);
@@ -96,7 +96,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_calculator_division) {
     EXPECT_DOUBLE_EQ(n2 * d, Division.getIm());
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_equality_operator_1) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_equality_1) {
     double r1 = 2.2, i1 = 2.2, r2 = 2.2 , i2 = 2.2;
 
     ComplexNumber a(r1, i1);
@@ -105,7 +105,7 @@ TEST(Moskvin_Stanislav_ComplexNumberTest, currect_equality_operator_1) {
     EXPECT_TRUE(a == b);
 }
 
-TEST(Moskvin_Stanislav_ComplexNumberTest, currect_equality_operator_2) {
+TEST(Moskvin_Stanislav_ComplexNumberTest, currect_equality_2) {
     double r1 = 2.2, i1 = 2.2, r2 = 2.2 , i2 = 2.0;
 
     ComplexNumber a(r1, i1);
